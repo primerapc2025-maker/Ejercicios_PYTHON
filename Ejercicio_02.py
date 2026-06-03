@@ -9,24 +9,39 @@ saldo = 1000000
 # =========================================
 def consultar_saldo():
     print("\n===CONSULTAR SALDO===")
-    print(f"Su saldo esde: {saldo}")
+    print(f"Su saldo es de: {saldo}")
     print("=======================")
 
 # =========================================
-#           REALISAR DEPOSITOS
+#           REALISAR RETIRO 
 # =========================================
 def retiro():
 
     global saldo
 
     print("====RETIRO====")
-    cuanto = float(input("Cuanto desea retirar: "))
+    cuanto_RE = float(input("Cuanto desea retirar: "))
 
     print("===FATURA===")
-    print(f"retira: {cuanto}")
-    print(f"Teniendo un sado de: {saldo}")
-    saldo = saldo - cuanto
+    print(f"retira: {cuanto_RE}")
+    saldo = saldo - cuanto_RE
     print(f"Nuebo saldo: {saldo}")
+    print(f"============")
+
+# =========================================
+#               CONSIGNAR
+# =========================================
+def consignar():
+    global saldo
+    
+    print("====COSIGNAR====")
+    cuanto_CO = float(input("Cuan desea consignar: "))
+
+    print("===FATURA===")
+    print(f"consigna: {cuanto_CO}")
+    saldo = saldo + cuanto_CO
+    print(f"Nuedo saldo: {saldo}")
+    print(f"==============")
 
 
 # =========================================
@@ -40,7 +55,9 @@ while escoje != 4:
     print("=================")
     print("1. Consultar saldo")
     print("2. retirar ")
-    print("3. Salir")
+    print("3. consignar")
+    print("4. salir")
+    print("=================")
 
     escoje = int(input("seleccione>> "))
     
@@ -50,7 +67,11 @@ while escoje != 4:
     elif escoje == 2:
         retiro()
     
+    elif escoje == 3:
+        consignar()
+
     else:
         print()
 
+print("SALIENDO...")
 
