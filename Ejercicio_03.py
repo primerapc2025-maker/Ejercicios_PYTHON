@@ -66,13 +66,6 @@ def bus_pro():
     if enc == False:
         print("Producto no encontrado")
 
-# ============================
-def valor_inbentario():
-    global tt_inb
-
-    for pro in inb:
-        tt_ind = pro[1] * pro[2]
-        print(tt_inb)
 
 # ============================
 opc = 0
@@ -84,8 +77,8 @@ while opc != 5:
     print("1. Registrar producto")
     print("2. Mostrar productos")
     print("3. Buscar producto")
-    print("4. salir")
-    print(f"total del inbentari: ${valor_inbentario}")
+    print("4. Total")
+    print("5. sair")
     print("============================")
 
     opc = int(input("Seleccione una opcion: "))
@@ -100,7 +93,9 @@ while opc != 5:
         bus_pro()
 
     elif opc == 4:
-        print("Saliendo...")
+        for pro in inb:
+            cantidad_totatl1 = pro[1] * pro[2]
+            print(cantidad_totatl1)
 
     else:
         print("!Opcion invalida¡")
