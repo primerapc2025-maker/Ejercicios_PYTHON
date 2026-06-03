@@ -21,12 +21,17 @@ def retiro():
 
     print("====RETIRO====")
     cuanto_RE = float(input("Cuanto desea retirar: "))
+    
+    if cuanto_RE > saldo:
+        print("!saldo insuficiente¡") 
+    
+    else:
+            print("===FATURA===")
+            print(f"retira: {cuanto_RE}")
+            saldo = saldo - cuanto_RE
+            print(f"Nuebo saldo: {saldo}")
+            print(f"============")
 
-    print("===FATURA===")
-    print(f"retira: {cuanto_RE}")
-    saldo = saldo - cuanto_RE
-    print(f"Nuebo saldo: {saldo}")
-    print(f"============")
 
 # =========================================
 #               CONSIGNAR
