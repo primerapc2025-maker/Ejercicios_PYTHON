@@ -46,7 +46,7 @@ def lista():
 def bus_pro():
     print('')
     print('============================')
-    print("      BUSCAR PRODUCTOS")
+    print("      BUSCAR PRODUCTO")
     print('============================')
     print('')
 
@@ -56,12 +56,11 @@ def bus_pro():
 
     for pro in inb:
 
-        if (buscar.lower() == pro[0].lower):
+        if (buscar.lower() == pro[0].lower()):
             print("Nombre:", pro[0])
             print("Precio: $", pro[1])
             print("Stock:", pro[2])
-
-        enc = True
+            enc = True
 
     if enc == False:
         print("Producto no encontrado")

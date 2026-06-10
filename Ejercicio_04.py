@@ -1,11 +1,24 @@
+
+texto = ""
+
+# =========================================
+def ingresser_texto():
+    global texto
+    print("=========================")
+    print("    REGISTRAR TEXTO")
+    print("=========================")
+    texto = input("Ingrese la frase o texto a analizar: ")
+
+    print
+
+
+# =========================================
 def analis(texto):
     print("=========================")
     print("   ANALISIS DE TEXTO")
     print("=========================")
 
-
-
-
+    
 
 
 
@@ -16,10 +29,10 @@ opcion = 0
 while opcion != 3:
 
     print("==================================")
-    print("       ANALISIS DE TEXTo")
+    print("       ANALISIS DE TEXTO")
     print("==================================")
     print("1. ingreser texto para su analisis")
-    print("2. Analisis del texto ingresado")
+    print("2. Análisis del texto ingresado")
     print("3. salir")
     print("==================================")
 
