@@ -2,26 +2,22 @@
 texto = ""
 
 # =========================================
-def ingresser_texto():
-    global texto
-    print("=========================")
-    print("    REGISTRAR TEXTO")
-    print("=========================")
-    texto = input("Ingrese la frase o texto a analizar: ")
-
-    print
-
-
-# =========================================
 def analis(texto):
     print("=========================")
     print("   ANALISIS DE TEXTO")
     print("=========================")
 
-    
+    cant_carac = len(texto)
+    print(f"Cantidad de caracteres: ", cant_carac)
 
+    cant_sin_espa = len(texto.replace(" ", ""))
+    print(f"Sin espasios: ", cant_sin_espa)
 
+    cant_voc = sum(1 for letra in texto.lower() if letra in "aeiouáéíóúAEIOUÁÉÍÓÚ")
+    print(f"Cantidad de vocales: ", cant_voc)
 
+    carac_espe = sum(1 for c in texto if not c.isalnum() and not c.isspace())
+    print(f"cantidad de caracteres especiales: ", carac_espe)
 
 # =========================================
 opcion = 0
@@ -41,6 +37,9 @@ while opcion != 3:
     print("==================================")
 
     if opcion == "1":
+        print("=========================")
+        print("    REGISTRAR TEXTO")
+        print("=========================")
         print("ingrese su texto")
         texto = str(input(">> "))
     
