@@ -22,7 +22,7 @@ def analis(texto):
 # =========================================
 opcion = 0
 
-while opcion != 3:
+while opcion != "3":
 
     print("==================================")
     print("       ANALISIS DE TEXTO")
